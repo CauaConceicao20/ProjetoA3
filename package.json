@@ -1,5 +1,5 @@
-}
-"name": "Projeto-pipeline",
+{
+ "name": "Projeto-pipeline",
   "version": "1.0.0",
   "description": "Projeto CI/CD",
   "author": "CauaConceicao20 <CauaConceicaoDev@hotmail.com>",
