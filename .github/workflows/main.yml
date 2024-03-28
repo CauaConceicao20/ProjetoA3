@@ -37,7 +37,7 @@ jobs:
         run: npm install -g @commitlint/cli @commitlint/config-conventional
 
       - name: Check Commit Messages
-        run: commitlint --from=HEAD~1
+        run: commitlint --from=HEAD^
 
       - name: Generate Semantic Version
         run: npx semantic-release
