@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set GitHub repository URL
-        run: echo "REPOSITORY_URL=https://github.com/MatheusLobo/GQS" >> $GITHUB_ENV
+        run: echo "REPOSITORY_URL=https://github.com/CauaConceicao20/ProjetoA3-pipeline" >> $GITHUB_ENV
       
       - name: Set NPM token
         run: echo "NPM_TOKEN=${{ secrets.NPM_TOKEN }}" >> $GITHUB_ENV
