@@ -9,11 +9,7 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -57,6 +53,6 @@ jobs:
 
       - name: Run Semantic Release
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} 
           REPOSITORY_URL: ${{ secrets.REPOSITORY_URL }}
         run: npx semantic-release
