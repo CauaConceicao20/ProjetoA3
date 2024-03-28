@@ -13,6 +13,13 @@ module.exports = {
     ],
     '@semantic-release/github',
     [
+      '@semantic-release/github',
+      {
+        
+        repositoryUrl: 'https://github.com/CauaConceicao20/ProjetoA3-pipeline',
+      },
+    ],
+    [
       '@semantic-release/git',
       {
         assets: ['CHANGELOG.md', 'package.json'],
