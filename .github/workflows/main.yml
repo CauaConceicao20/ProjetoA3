@@ -1,0 +1,44 @@
+name: Continuous Integration and Continuous Deployment
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+ 
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '19' 
+          distribution: 'adopt'
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20' 
+          
+      - name: Build with Maven
+        run: mvn -B clean package
+        working-directory: projeto 
+
+      - name: Run Tests
+        run: mvn test
+        working-directory: projeto 
+
+      - name: Install Commitlint
+        run: npm install -g @commitlint/cli @commitlint/config-conventional
+
+      - name: Check Commit Messages
+        run: commitlint --from=HEAD~1
+
+      - name: Generate Semantic Version
+        run: npx semantic-release
+ 
