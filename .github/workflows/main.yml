@@ -59,4 +59,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} 
           REPOSITORY_URL: ${{ secrets.REPOSITORY_URL }}
-        run: npx semantic-release
+        run: npx semantic-release 
