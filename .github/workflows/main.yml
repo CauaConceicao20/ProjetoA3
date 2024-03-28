@@ -60,3 +60,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} 
           REPOSITORY_URL: ${{ secrets.REPOSITORY_URL }}
         run: npx semantic-release
+ 
