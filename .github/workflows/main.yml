@@ -42,6 +42,9 @@ jobs:
       - name: Check Commit Messages
         run: npx commitlint --from=$MAIN_COMMIT_HASH
 
+      - name: Install Semantic Release Changelog Plugin
+        run: npm install @semantic-release/changelog
+
       - name: Generate Semantic Version
         env:
            NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
