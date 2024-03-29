@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.1.0...v1.2.0) (2024-03-29)
+
+
+### Features
+
+* adicionando funcionalidade de subtracao ([fa4832e](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/fa4832eed9620a07f8a565e712cbde008e9c1934))
+
 # [1.1.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.0.0...v1.1.0) (2024-03-29)
 
 
