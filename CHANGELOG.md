@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.0.0...v1.1.0) (2024-03-29)
+
+
+### Features
+
+* adiciona funcionalidade de soma ([f583f04](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/f583f04484a508d4b689e1c41ccff6be401e7f60))
+
 # 1.0.0 (2024-03-28)
 
 
