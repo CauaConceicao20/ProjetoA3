@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.3.0...v1.4.0) (2024-04-01)
+
+
+### Features
+
+* adicionando funcionalidade de multiplicar numeros ([577f98f](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/577f98f56aa8b2884ea90524cdd657cd3eb02006))
+
 # [1.3.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.2.0...v1.3.0) (2024-04-01)
 
 
