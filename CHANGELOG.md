@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.2.0...v1.3.0) (2024-04-01)
+
+
+### Features
+
+* adicionando funcionalidade de divisão ([85056e3](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/85056e3509d05844f88f84b0cfb61803ae624649))
+
 # [1.2.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.1.0...v1.2.0) (2024-03-29)
 
 
