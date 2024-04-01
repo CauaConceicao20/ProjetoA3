@@ -15,4 +15,8 @@ public class OperacoesController {
 	public int subtracao(@RequestParam int a, @RequestParam int b) {
 		return a - b;
 	}
+
+	public int divisao(@RequestParam int a, @RequestParam int b) {
+		return a / b;
+	}
 }
