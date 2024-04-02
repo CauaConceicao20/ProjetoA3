@@ -42,30 +42,12 @@ jobs:
       - name: Run Tests
         run: mvn test
         working-directory: projeto 
-
-  Conventional-commits:
-    runs-on: windows-latest
-    if: always()  
-    steps:
-      - name: Use Node.js 20
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20' 
       
       - name: Install Commitlint
         run: npm install -g @commitlint/cli @commitlint/config-conventional
 
       - name: Check Commit Messages
         run: npx commitlint --from=$MAIN_COMMIT_HASH
-        
-  Semantic-release:
-    runs-on: windows-latest
-    if: always()  
-    steps:
-      - name: Use Node.js 20
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20' 
     
       - name: Install Semantic Release Changelog Plugin
         run: npm install @semantic-release/changelog
@@ -74,7 +56,6 @@ jobs:
         run: npm install @semantic-release/git
 
       - name: Run Semantic Release
-        if: always()  
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} 
           REPOSITORY_URL: ${{ secrets.REPOSITORY_URL }}
