@@ -7,7 +7,7 @@ on:
     branches: [main]
  
 jobs:
-  build:
+  Config-ambiente:
     runs-on: windows-latest
     
     env:
@@ -43,12 +43,20 @@ jobs:
         run: mvn test
         working-directory: projeto 
 
+  Conventional-commits:
+      runs-on: windows-latest
+      steps:
+      
       - name: Install Commitlint
         run: npm install -g @commitlint/cli @commitlint/config-conventional
 
       - name: Check Commit Messages
         run: npx commitlint --from=$MAIN_COMMIT_HASH
-
+        
+  Semantic-release:
+    runs-on: windows-latest
+    steps:
+    
       - name: Install Semantic Release Changelog Plugin
         run: npm install @semantic-release/changelog
 
