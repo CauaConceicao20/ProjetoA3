@@ -46,6 +46,11 @@ jobs:
   Conventional-commits:
       runs-on: windows-latest
       steps:
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20' 
       
       - name: Install Commitlint
         run: npm install -g @commitlint/cli @commitlint/config-conventional
@@ -56,6 +61,11 @@ jobs:
   Semantic-release:
     runs-on: windows-latest
     steps:
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20' 
     
       - name: Install Semantic Release Changelog Plugin
         run: npm install @semantic-release/changelog
