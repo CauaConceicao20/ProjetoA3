@@ -44,9 +44,9 @@ jobs:
         working-directory: projeto 
 
   Conventional-commits:
-      runs-on: windows-latest
-      steps:
-
+    runs-on: windows-latest
+    if: always()  
+    steps:
       - name: Use Node.js 20
         uses: actions/setup-node@v2
         with:
@@ -60,8 +60,8 @@ jobs:
         
   Semantic-release:
     runs-on: windows-latest
+    if: always()  
     steps:
-
       - name: Use Node.js 20
         uses: actions/setup-node@v2
         with:
@@ -74,6 +74,7 @@ jobs:
         run: npm install @semantic-release/git
 
       - name: Run Semantic Release
+        if: always()  
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} 
           REPOSITORY_URL: ${{ secrets.REPOSITORY_URL }}
