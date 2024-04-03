@@ -24,6 +24,7 @@ jobs:
         run: npm install @semantic-release/git
 
   Config-environment:
+    needs: [Install-dependencies]
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -56,6 +57,7 @@ jobs:
         working-directory: projeto 
 
   Tests:
+     needs: [Config-environment]
      runs-on: ubuntu-latest
      
      steps:
@@ -64,7 +66,7 @@ jobs:
         working-directory: projeto 
 
   Commits-release:
-  
+    needs: [Tests]
     runs-on: ubuntu-latest
     steps:
       - name: Run Semantic Release
