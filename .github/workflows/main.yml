@@ -7,13 +7,29 @@ on:
     branches: [main]
  
 jobs:
-  Config-ambiente:
-    runs-on: windows-latest
+  Install-dependencies:
+    runs-on: ubuntu-latest
+      
+    steps:
+      - name: Install Commitlint
+        run: npm install -g @commitlint/cli @commitlint/config-conventional
+        
+      - name: Check Commit Messages
+        run: npx commitlint --from=$MAIN_COMMIT_HASH
     
+      - name: Install Semantic Release Changelog Plugin
+        run: npm install @semantic-release/changelog
+
+      - name: Install Semantic Release Git Plugin
+        run: npm install @semantic-release/git
+
+  Config-environment:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     
+    runs-on: ubuntu-latest
+      
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -39,24 +55,20 @@ jobs:
         run: mvn -B clean package
         working-directory: projeto 
 
+  Tests:
+     runs-on: ubuntu-latest
+     
+     steps:
       - name: Run Tests
         run: mvn test
         working-directory: projeto 
-      
-      - name: Install Commitlint
-        run: npm install -g @commitlint/cli @commitlint/config-conventional
 
-      - name: Check Commit Messages
-        run: npx commitlint --from=$MAIN_COMMIT_HASH
-    
-      - name: Install Semantic Release Changelog Plugin
-        run: npm install @semantic-release/changelog
-
-      - name: Install Semantic Release Git Plugin
-        run: npm install @semantic-release/git
-
+  Commits-release:
+  
+    runs-on: ubuntu-latest
+    steps:
       - name: Run Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} 
           REPOSITORY_URL: ${{ secrets.REPOSITORY_URL }}
-        run: npx semantic-release  
+        run: npx semantic-release
