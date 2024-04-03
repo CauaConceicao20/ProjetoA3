@@ -14,9 +14,6 @@ jobs:
       - name: Install Commitlint
         run: npm install -g @commitlint/cli @commitlint/config-conventional
         
-      - name: Check Commit Messages
-        run: npx commitlint --from=$GITHUB_SHA
-    
       - name: Install Semantic Release Changelog Plugin
         run: npm install @semantic-release/changelog
 
@@ -69,6 +66,10 @@ jobs:
     needs: [Tests]
     runs-on: ubuntu-latest
     steps:
+    
+      - name: Check Commit Messages
+        run: npx commitlint --from=$GITHUB_SHA
+    
       - name: Run Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} 
