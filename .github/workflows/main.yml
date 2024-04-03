@@ -60,7 +60,7 @@ jobs:
      steps:
       - name: Run Tests
         run: mvn test
-        working-directory: projeto 
+        working-directory: Projeto 
 
   Commits-release:
     needs: [Tests]
