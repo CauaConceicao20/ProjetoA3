@@ -53,17 +53,13 @@ jobs:
         run: mvn -B clean package
         working-directory: Projeto
 
-  Tests:
-     needs: [Config-environment]
-     runs-on: ubuntu-latest
-     
-     steps:
       - name: Run Tests
         run: mvn test
         working-directory: Projeto
 
+
   Commits-release:
-    needs: [Tests]
+    needs: [Config-environment]
     runs-on: ubuntu-latest
     steps:
     
