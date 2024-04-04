@@ -64,7 +64,7 @@ jobs:
     steps:
         
       - name: Check Commit Messages
-        run: npx commitlint --from=$MAIN_COMMIT_HASH
+        run: /bin/bash -c "npx commitlint --from=$MAIN_COMMIT_HASH"
         working-directory: Projeto
     
       - name: Run Semantic Release
