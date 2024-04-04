@@ -51,7 +51,7 @@ jobs:
           
       - name: Build with Maven
         run: mvn -B clean package
-        working-directory: Projeto/ 
+        working-directory: Projeto
 
   Tests:
      needs: [Config-environment]
@@ -60,7 +60,7 @@ jobs:
      steps:
       - name: Run Tests
         run: mvn test
-        working-directory: Projeto/
+        working-directory: Projeto
 
   Commits-release:
     needs: [Tests]
