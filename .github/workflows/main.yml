@@ -20,7 +20,7 @@ jobs:
       - name: Install Semantic Release Git Plugin
         run: npm install @semantic-release/git
 
-  Config-environment:
+  Build:
     needs: [Install-dependencies]
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -59,15 +59,13 @@ jobs:
 
 
   Commits-release:
-    needs: [Config-environment]
+    needs: [Build]
     runs-on: ubuntu-latest
     steps:
-    
-      - name: Checkout repository
-        uses: actions/checkout@v3
         
       - name: Check Commit Messages
         run: npx commitlint --from=$MAIN_COMMIT_HASH
+        working-directory: Projeto
     
       - name: Run Semantic Release
         env:
