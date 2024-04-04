@@ -1,3 +1,11 @@
+## [1.5.1](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.5.0...v1.5.1) (2024-04-04)
+
+
+### Bug Fixes
+
+* testando fix novamente ([6ae57f0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/6ae57f0feabeed588f1c77b307ae2dbfb5aef0b6))
+* testando fiz ([88595a2](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/88595a2f6f52aac9fd21f19f982d5426ba8a0567))
+
 # [1.5.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.4.0...v1.5.0) (2024-04-04)
 
 
