@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.5.1...v1.6.0) (2024-04-04)
+
+
+### Features
+
+* test feat ([5daa868](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/5daa868bd6c6e830828ed4869c561ea8831394eb))
+
 ## [1.5.1](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.5.0...v1.5.1) (2024-04-04)
 
 
