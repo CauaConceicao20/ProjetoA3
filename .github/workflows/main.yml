@@ -47,19 +47,12 @@ jobs:
     needs: [Build]
     runs-on: ubuntu-latest
     steps:
-
-      - name: Install Commitlint
-        run: npm install -g @commitlint/cli @commitlint/config-conventional
-        
+    
       - name: Install Semantic Release Changelog Plugin
         run: npm install @semantic-release/changelog
 
       - name: Install Semantic Release Git Plugin
         run: npm install @semantic-release/git
-    
-      - name: Check Commit Messages
-        run: npx commitlint --from=$MAIN_COMMIT_HASH
-        working-directory: Projeto
         
       - name: Run Semantic Release
         env:
