@@ -59,7 +59,7 @@ jobs:
     
       - name: Check Commit Messages
         run: npx commitlint --from=$MAIN_COMMIT_HASH
-        working-directory: Projeto
+        working-directory: C:\Users\user\OneDrive\Documentos\Projeto-calculadora\Projeto
         
       - name: Run Semantic Release
         env:
