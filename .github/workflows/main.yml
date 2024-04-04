@@ -63,11 +63,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         
+      - name: Check default shell
+        run: echo $SHELL
+
       - name: Check Commit Messages
         run: npx commitlint --from=$MAIN_COMMIT_HASH
-        shell: pwsh
+        shell: sh
         working-directory: Projeto
-    
+        
       - name: Run Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} 
