@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.4.0...v1.5.0) (2024-04-04)
+
+
+### Features
+
+* adiciona funcionalidade restoDeDivisao ([74f51f1](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/74f51f1890800a8e5aacf59ca08a3519ec415818))
+
 # [1.4.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.3.0...v1.4.0) (2024-04-01)
 
 
