@@ -64,7 +64,7 @@ jobs:
     steps:
     
       - name: Check Commit Messages
-        run: npx commitlint --from=$GITHUB_SHA
+        run: npx commitlint --from=$MAIN_COMMIT_HASH
     
       - name: Run Semantic Release
         env:
