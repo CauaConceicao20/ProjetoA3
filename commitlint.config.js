@@ -13,8 +13,7 @@ module.exports = {
       'build',    
       'ci',        
       'chore',    
-      'revert',   
-      'BREAKING CHANGE'   
+      'revert'      
     ]],
   },
 };
