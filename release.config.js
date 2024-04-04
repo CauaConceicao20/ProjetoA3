@@ -6,16 +6,15 @@ module.exports = {
     '@semantic-release/changelog',
     '@semantic-release/npm',
     [
-      '@semantic-release/npm',
+      '@semantic-release/github',
       {
-        npmToken: process.env.NPM_TOKEN,
+        assets: ['package.json', 'CHANGELOG.md'],
       },
     ],
-    '@semantic-release/github',
     [
       '@semantic-release/git',
       {
-        assets: ['CHANGELOG.md', 'package.json'],
+        assets: ['package.json', 'CHANGELOG.md'],
       },
     ],
   ],
