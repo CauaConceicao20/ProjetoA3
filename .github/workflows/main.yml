@@ -63,7 +63,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         
-      - name: Check default shell
+      - name: Print default shell
         run: echo $SHELL
 
       - name: Check Commit Messages
