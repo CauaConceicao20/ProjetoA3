@@ -7,25 +7,10 @@ on:
     branches: [main]
  
 jobs:
-  Install-dependencies:
-    runs-on: ubuntu-latest
-      
-    steps:
-      - name: Install Commitlint
-        run: npm install -g @commitlint/cli @commitlint/config-conventional
-        
-      - name: Install Semantic Release Changelog Plugin
-        run: npm install @semantic-release/changelog
-
-      - name: Install Semantic Release Git Plugin
-        run: npm install @semantic-release/git
-
   Build:
-    needs: [Install-dependencies]
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-    
     runs-on: ubuntu-latest
       
     steps:
@@ -62,10 +47,16 @@ jobs:
     needs: [Build]
     runs-on: ubuntu-latest
     steps:
-        
-      - name: Print default shell
-        run: echo $SHELL
 
+      - name: Install Commitlint
+        run: npm install -g @commitlint/cli @commitlint/config-conventional
+        
+      - name: Install Semantic Release Changelog Plugin
+        run: npm install @semantic-release/changelog
+
+      - name: Install Semantic Release Git Plugin
+        run: npm install @semantic-release/git
+    
       - name: Check Commit Messages
         run: npx commitlint --from=$MAIN_COMMIT_HASH
         working-directory: Projeto
