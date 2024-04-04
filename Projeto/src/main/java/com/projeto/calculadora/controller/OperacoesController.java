@@ -23,4 +23,9 @@ public class OperacoesController {
 	public int multiplicacao(@RequestParam int a, @RequestParam int b) {
 		return a * b;
 	}
+
+	public double restoDeDivisao(@RequestParam int a, @RequestParam int b) {
+		return a % b;
+	}
+
 }
