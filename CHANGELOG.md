@@ -1,3 +1,17 @@
+## [1.7.1](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.7.0...v1.7.1) (2024-04-04)
+
+
+### Bug Fixes
+
+* testando fix path ([8f2ddd8](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/8f2ddd8a6f54879b4e46235492364006e24d479b))
+
+# [1.7.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.6.0...v1.7.0) (2024-04-04)
+
+
+### Features
+
+* testando feat ([6302b62](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/6302b621885740ec9afebcba09058b8dcbdace44))
+
 # [1.6.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.5.1...v1.6.0) (2024-04-04)
 
 
