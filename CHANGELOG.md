@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.7.1...v1.8.0) (2024-04-05)
+
+
+### Features
+
+* adiciona validacao de commits ([e12d5b3](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/e12d5b33f9884eff34be962ecce3c6729f608477))
+
 ## [1.7.1](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.7.0...v1.7.1) (2024-04-04)
 
 
