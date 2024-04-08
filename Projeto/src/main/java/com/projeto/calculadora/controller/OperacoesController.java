@@ -11,7 +11,6 @@ public class OperacoesController {
 	public int soma(@RequestParam int a, @RequestParam int b) {
 		return a + b;
 	}
-	
 	public int subtracao(@RequestParam int a, @RequestParam int b) {
 		return a - b;
 	}
