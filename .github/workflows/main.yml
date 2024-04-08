@@ -45,6 +45,7 @@ jobs:
 
       - name: Grant execute permissions to commit-msg script
         run: chmod +x commit-msg
+        working-directory: Projeto 
 
       - name: Run Setup Script
         run: bash setup.sh
