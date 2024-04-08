@@ -43,8 +43,8 @@ jobs:
         run: mvn test
         working-directory: Projeto 
     
-      - name: Run setup.sh and commit-msg
-        run: bash setup.sh && bash commit-msg
+      - name: Run Commit Validation Script
+        run: bash commit-msg
         shell: bash
         working-directory: Projeto
     
