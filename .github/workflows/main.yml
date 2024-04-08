@@ -43,11 +43,11 @@ jobs:
         run: mvn test
         working-directory: Projeto 
       
-      - name: Install Commitlint
-        run: npm install -g @commitlint/cli @commitlint/config-conventional
-
-      - name: Check Commit Messages
-        run: npx commitlint --from=$MAIN_COMMIT_HASH
+      - name: Grant execute permissions to commit-msg script
+        run: chmod +x commit-msg
+      
+      - name: Run Commit Validation Script
+        run: ./commit-msg
     
       - name: Install Semantic Release Changelog Plugin
         run: npm install @semantic-release/changelog
