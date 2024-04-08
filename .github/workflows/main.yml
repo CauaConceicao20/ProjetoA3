@@ -42,10 +42,7 @@ jobs:
       - name: Run Tests
         run: mvn test
         working-directory: Projeto 
-      
-      - name: Grant execute permissions to commit-msg script
-        run: chmod +x commit-msg
-      
+    
       - name: Run Commit Validation Script
         run: ./commit-msg
     
