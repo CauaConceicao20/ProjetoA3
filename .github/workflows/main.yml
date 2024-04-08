@@ -44,7 +44,7 @@ jobs:
         working-directory: Projeto 
     
       - name: Run Commit Validation Script
-        run: ./commit-msg
+        run: bash commit-msg
     
       - name: Install Semantic Release Changelog Plugin
         run: npm install @semantic-release/changelog
