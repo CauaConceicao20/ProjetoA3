@@ -42,6 +42,10 @@ jobs:
       - name: Run Tests
         run: mvn test
         working-directory: Projeto 
+
+      - name: Run Setup Script
+        run: bash setup.sh
+        working-directory: Projeto 
     
       - name: Run Commit Validation Script
         run: bash commit-msg
