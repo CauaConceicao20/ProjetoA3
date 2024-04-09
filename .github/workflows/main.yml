@@ -1,13 +1,13 @@
 name: Continuous Integration and Continuous Deployment
-    
+
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
-    branches: [main]
- 
+    branches: [ main ]
+
 jobs:
-  Config-ambiente:
+  Preparing-Environment:
     runs-on: ubuntu-latest
     
     env:
@@ -20,29 +20,38 @@ jobs:
 
       - name: Set GitHub repository URL
         run: echo "REPOSITORY_URL=https://github.com/CauaConceicao20/ProjetoA3-pipeline" >> $GITHUB_ENV
-      
+
       - name: Set NPM token
         run: echo "NPM_TOKEN=${{ secrets.NPM_TOKEN }}" >> $GITHUB_ENV
 
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '19' 
+          java-version: '19'
           distribution: 'adopt'
 
       - name: Use Node.js 20
         uses: actions/setup-node@v2
         with:
-          node-version: '20' 
-          
+          node-version: '20'
+  Build:
+    needs: [Preparing-Environment]
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Build with Maven
         run: mvn -B clean package
-        working-directory: Projeto 
+        working-directory: Projeto
 
       - name: Run Tests
         run: mvn test
         working-directory: Projeto
-    
+
+  Release:
+    needs: [Build]
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Install Semantic Release Changelog Plugin
         run: npm install @semantic-release/changelog
 
@@ -51,6 +60,6 @@ jobs:
 
       - name: Run Semantic Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} 
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           REPOSITORY_URL: ${{ secrets.REPOSITORY_URL }}
         run: npx semantic-release
