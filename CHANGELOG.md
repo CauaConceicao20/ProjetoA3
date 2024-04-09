@@ -1,3 +1,22 @@
+# [1.9.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.8.0...v1.9.0) (2024-04-09)
+
+
+### Features
+
+* commit test ([a1bed5d](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/a1bed5d5184d491b10501769d965b888b9edf5a3))
+* test commit BREAKING CHANGE: test ([e0ccc51](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/e0ccc51ef72028b9d4d14ff4394dc9032c972ad1))
+* testando commit ([7cc99be](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/7cc99beb2c4b6023ac86c394d0c79ae68ebc730a))
+* testando commit ([875848c](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/875848cec90c49ba66e57ea63c2ab0372d235f7b))
+* testando commit ([451d17e](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/451d17e838b92a620a79ae7f58f729148e96035b))
+* testando commit direto do bash ([7b87a9e](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/7b87a9eda020640f2a6ecb4e2a1caaf2a30ab004))
+* testando commit dnv ([0ff2928](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/0ff29280d26e465f44bf0b89962be83372e0815c))
+* testando commit novamente ([399571a](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/399571a88ad404718fdfafc191b1ef90b526a923))
+* testando commit-msg ([75107e2](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/75107e2c19989fced88735d1c18e10553bfb375c))
+* testando commit-msg ([6003202](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/600320239d78363251c7e0da789f20174890257c))
+* testando commit-msg dnv ([1474a25](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/1474a25acdea040c41f7ee824a905504603c4efe))
+* testando commit-msg mais uma vez ([57b8056](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/57b8056138a11ef430e259da51015284a617bf39))
+* testando novamente ([dd032c5](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/dd032c5b6cecb23e7efdeca5acf6974188d157f2))
+
 # [1.8.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.7.1...v1.8.0) (2024-04-05)
 
 
