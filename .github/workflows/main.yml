@@ -30,10 +30,10 @@ jobs:
           java-version: '19'
           distribution: 'adopt'
 
-      - name: Use Node.js 20.12.1
+      - name: Use Node.js 20
         uses: actions/setup-node@v2
         with:
-          node-version: '20.12.1'
+          node-version: '20'
 
       - name: Build with Maven
         run: mvn -B clean package
@@ -54,4 +54,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           REPOSITORY_URL: ${{ secrets.REPOSITORY_URL }}
         run: npx semantic-release
-        working-directory: Projeto
