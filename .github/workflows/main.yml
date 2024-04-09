@@ -41,14 +41,6 @@ jobs:
 
       - name: Run Tests
         run: mvn test
-        working-directory: Projeto 
-
-      - name: Run chmod+x & setup.sh
-        run: chmod +x commit-msg && bash setup.sh 
-        working-directory: Projeto
-    
-      - name: Run Commit Validation Script
-        run: bash commit-msg
         working-directory: Projeto
     
       - name: Install Semantic Release Changelog Plugin
