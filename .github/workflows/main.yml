@@ -48,6 +48,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Use Node.js 20.12.1
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.12.1'
+
       - name: Install Semantic Release Changelog Plugin
         run: npm install @semantic-release/changelog
 
