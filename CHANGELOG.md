@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.9.0...v2.0.0) (2024-04-09)
+
+
+### Features
+
+* testando commit ([4b4b33f](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/4b4b33f25cc8cfd748c138d602463c5e53bd81fa))
+
+
+### BREAKING CHANGES
+
+* test breaking change
+
 # [1.9.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v1.8.0...v1.9.0) (2024-04-09)
 
 
