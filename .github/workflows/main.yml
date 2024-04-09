@@ -1,5 +1,5 @@
 name: Continuous Integration and Continuous Deployment
-   
+    
 on:
   push:
     branches: [main]
@@ -41,6 +41,17 @@ jobs:
 
       - name: Run Tests
         run: mvn test
+<<<<<<< HEAD
+=======
+        working-directory: Projeto 
+
+      - name: Run chmod+x & setup.sh
+        run: chmod +x commit-msg && bash setup.sh 
+        working-directory: Projeto
+    
+      - name: Run Commit Validation Script
+        run: bash commit-msg
+>>>>>>> 7cc99beb2c4b6023ac86c394d0c79ae68ebc730a
         working-directory: Projeto
     
       - name: Install Semantic Release Changelog Plugin
