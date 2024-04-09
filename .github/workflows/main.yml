@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  Preparing-Environment:
+  Build:
     runs-on: ubuntu-latest
     
     env:
@@ -34,11 +34,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '20'
-  Build:
-    needs: [Preparing-Environment]
-    runs-on: ubuntu-latest
 
-    steps:
       - name: Build with Maven
         run: mvn -B clean package
         working-directory: Projeto
@@ -48,7 +44,7 @@ jobs:
         working-directory: Projeto
 
   Release:
-    needs: [Build]
+    needs: [ Build ]
     runs-on: ubuntu-latest
 
     steps:
