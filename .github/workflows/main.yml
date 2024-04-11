@@ -43,18 +43,14 @@ jobs:
         run: mvn test
         working-directory: Projeto
 
-      - name: Run version generation script
-        run: bash generateVersion.sh true
-        working-directory: Projeto
+      - name: Install Semantic Release Changelog Plugin
+        run: npm install @semantic-release/changelog
 
-    # - name: Install Semantic Release Changelog Plugin
-    #   run: npm install @semantic-release/changelog
+      - name: Install Semantic Release Git Plugin
+        run: npm install @semantic-release/git
 
-    # - name: Install Semantic Release Git Plugin
-    #   run: npm install @semantic-release/git
-
-    #- name: Run Semantic Release
-    #   env:
-    #    GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-    #  REPOSITORY_URL: ${{ secrets.REPOSITORY_URL }}
-    #     run: npx semantic-release
+      - name: Run Semantic Release
+        env:
+           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+           REPOSITORY_URL: ${{ secrets.REPOSITORY_URL }}
+        run: npx semantic-release
