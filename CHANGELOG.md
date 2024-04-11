@@ -1,3 +1,12 @@
+# [2.2.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v2.1.0...v2.2.0) (2024-04-11)
+
+
+### Features
+
+* adiciona noovamnete versao semantica BREAKING CHANGE: testando breaking change ([e0736fe](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/e0736fe5529fbac163381358b7c406b9360244db))
+* testando script gerador de commit ([29b316a](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/29b316a272f2ba93445692a5388ff1ce95b90e3a))
+* update main.yml ([f516e3c](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/f516e3c2618b55b950a72a23ee4fc076586068e1))
+
 # [2.1.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v2.0.0...v2.1.0) (2024-04-11)
 
 
