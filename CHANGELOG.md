@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v2.2.0...v3.0.0) (2024-04-11)
+
+
+### Features
+
+* teste da quebra de comptibilidade ([68890b2](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/68890b269ab2ed8db6a5f1b5175e479434c69a91))
+
+
+### BREAKING CHANGES
+
+* testa breaking change
+
 # [2.2.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v2.1.0...v2.2.0) (2024-04-11)
 
 
