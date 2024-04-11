@@ -47,7 +47,6 @@ jobs:
         run: bash generateVersion.sh true
         working-directory: Projeto
 
-
     # - name: Install Semantic Release Changelog Plugin
     #   run: npm install @semantic-release/changelog
 
