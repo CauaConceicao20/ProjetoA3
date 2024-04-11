@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v3.0.0...v3.0.1) (2024-04-11)
+
+
+### Bug Fixes
+
+* testando alteração no path da versao ([da663fe](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/da663feb6e89b735a92bb3e066a0e324dbf07955))
+
 # [3.0.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v2.2.0...v3.0.0) (2024-04-11)
 
 
