@@ -42,6 +42,7 @@
     </dependencies>
     <build>
         <plugins>
+            <!-- Plugin do compilador Maven -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -51,6 +52,8 @@
                     <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
+            
+            <!-- Plugin do Spring Boot Maven -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
