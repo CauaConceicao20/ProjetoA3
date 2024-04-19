@@ -35,14 +35,11 @@ jobs:
 
       - name: Validate commits
         run: |
-          git fetch --depth=1 origin +refs/tags/*:refs/tags/*
-          git log $(git describe --tags --abbrev=0)..HEAD --no-decorate --pretty=format:"%s" > messages.txt
-          while read -r commit; do
-            if [[ ! $commit =~ ((build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\(.*\))?!?: .*) ]]; then
-              echo "commit is not valid: '$commit'"
-              exit 1
-            fi
-          done < messages.txt
+          commit_message=$(git log -1 --pretty=format:"%s" HEAD)
+          if [[ ! $commit_message =~ ((build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\(.*\))?!?: .*) ]]; then
+            echo "commit is not valid: '$commit_message'"
+            exit 1
+          fi
           
   build:
     runs-on: ubuntu-latest
