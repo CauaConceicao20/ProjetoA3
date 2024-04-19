@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  setup:
+  preflight:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -50,8 +50,14 @@ jobs:
 
   build_and_test:
     runs-on: ubuntu-latest
-    needs: setup
+    needs: preflight
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set GitHub repository URL
+        run: echo "REPOSITORY_URL=https://github.com/CauaConceicao20/ProjetoA3-pipeline" >> $GITHUB_ENV
+    
       - uses: actions/checkout@v2
       - name: Add Maven Compiler plugin
         run: mvn org.apache.maven.plugins:maven-compiler-plugin:3.13.0:help -Ddetail=true
