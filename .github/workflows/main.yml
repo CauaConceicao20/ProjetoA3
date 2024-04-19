@@ -35,6 +35,9 @@ jobs:
           distribution: 'adopt'
           maven-version: '3.9.5'
 
+      - name: Add Maven Compiler plugin
+        run: mvn org.apache.maven.plugins:maven-compiler-plugin:3.13.0:help -Ddetail=true
+
       - name: Use Node.js 20
         uses: actions/setup-node@v2
         with:
