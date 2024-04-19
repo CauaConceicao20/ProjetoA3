@@ -47,6 +47,7 @@ jobs:
     needs: preflight
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
       - name: Install Semantic Release Changelog Plugin
         run: npm install @semantic-release/changelog
 
