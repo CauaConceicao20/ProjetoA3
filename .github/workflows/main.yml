@@ -35,13 +35,14 @@ jobs:
 
       - name: Validate commits
         run: |
-          commits=$(git log --pretty=format:"%s" $GITHUB_SHA~1..$GITHUB_SHA)
-          for commit in $commits; do
+          git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+          git log $(git describe --tags --abbrev=0)..HEAD --no-decorate --pretty=format:"%s" > messages.txt
+          while read -r commit; do
             if [[ ! $commit =~ ((build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\(.*\))?!?: .*) ]]; then
               echo "commit is not valid: '$commit'"
               exit 1
             fi
-          done
+          done < messages.txt
           
   build:
     runs-on: ubuntu-latest
