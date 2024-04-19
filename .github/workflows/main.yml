@@ -32,6 +32,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '20'
+
+      - name: Add Maven Compiler plugin
+        run: mvn org.apache.maven.plugins:maven-compiler-plugin:3.11.0:help -Ddetail=true
           
   build:
     runs-on: ubuntu-latest
