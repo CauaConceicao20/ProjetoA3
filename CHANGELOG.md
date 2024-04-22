@@ -1,3 +1,10 @@
+# [3.4.0](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v3.3.1...v3.4.0) (2024-04-22)
+
+
+### Features
+
+* testando commits com gerador de versao BREAKING CHANGE: testando breaking change ([1b091a7](https://github.com/CauaConceicao20/ProjetoA3-pipeline/commit/1b091a7c6a5897aa7876f021a070cc99f8d750b1))
+
 ## [3.3.1](https://github.com/CauaConceicao20/ProjetoA3-pipeline/compare/v3.3.0...v3.3.1) (2024-04-20)
 
 
